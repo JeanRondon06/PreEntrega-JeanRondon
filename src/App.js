@@ -2,16 +2,25 @@ import "./App.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import ItemList from "./components/ItemList/ItemList";
 import CounterContainer from "./components/Counter/CounterContainer";
+import ItemListContainer from "./components/ItemList/ItemListContainer";
+import FetchingData from "./components/FetchingData/FetchingData";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  let saludo = "Hola wachin como estas";
-  let edad = 26;
-
   return (
     <div className="App">
-      <Navbar color="red" />
-      <ItemList saludo={saludo} edad={edad} />
+      <BrowserRouter>
+        <Routes>
+          <Route />
+          <Route />
+          <Route />
+        </Routes>
+      </BrowserRouter>
+      <Navbar />
       <CounterContainer />
+
+      <ItemListContainer />
+      <FetchingData />
     </div>
   );
 }

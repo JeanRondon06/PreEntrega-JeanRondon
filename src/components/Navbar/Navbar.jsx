@@ -1,6 +1,5 @@
 import styles from "./Navbar.module.css";
 import CartWidget from "../CartWidget/CartWidget";
-import imgLogo from "../../assets/dony.png";
 
 export const Navbar = (color) => {
   return (
@@ -8,7 +7,7 @@ export const Navbar = (color) => {
       <h1 className={styles.containerLogo}>
         Tamoaki
         <img
-          src={imgLogo}
+          src="https://res.cloudinary.com/drsm1mg9b/image/upload/v1681788835/dony_xrixcu.png"
           alt="Este es el logo de la empresa"
           style={{ Display: "flex" }}
         />
