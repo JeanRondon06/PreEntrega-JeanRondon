@@ -6,9 +6,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const ItemCard = ({ item }) => {
+const ItemCard = ({ item, deleteProduct, updateProduct }) => {
   return (
-    <Card sx={{ width: 345, height: 350 }} key={item.id}>
+    <Card sx={{ width: 345, height: 350 }}>
       <CardMedia sx={{ height: 140 }} image={item.img} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -25,7 +25,24 @@ const ItemCard = ({ item }) => {
         <Button variant="contained" size="small">
           Ver Detalle
         </Button>
-        <Button size="small">Learn More</Button>
+        <Button
+          variant="contained"
+          size="small"
+          onClick={() => {
+            deleteProduct(item.id);
+          }}
+        >
+          borrar
+        </Button>
+        <Button
+          variant="contained"
+          size="small"
+          onClick={() => {
+            updateProduct(item.id, { description: "me modifique" });
+          }}
+        >
+          Editar
+        </Button>
       </CardActions>
     </Card>
   );

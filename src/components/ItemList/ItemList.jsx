@@ -2,7 +2,7 @@ import * as React from "react";
 
 import ItemCard from "./ItemCard";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, deleteProduct, updateProduct }) => {
   return (
     <div
       style={{
@@ -14,7 +14,14 @@ const ItemList = ({ items }) => {
       }}
     >
       {items.map((item) => {
-        return <ItemCard item={item} key={item.id} />;
+        return (
+          <ItemCard
+            item={item}
+            deleteProduct={deleteProduct}
+            updateProduct={updateProduct}
+            key={item.id}
+          />
+        );
       })}
     </div>
   );

@@ -1,5 +1,7 @@
+import React from "react";
 
-const login = () => {
+const Login = () => {
+  return <div>Login</div>;
+};
 
-    return <h1> Hola desde el componente login</h1>
-}
+export default Login;

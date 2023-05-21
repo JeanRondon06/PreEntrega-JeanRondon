@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css";
 import CartWidget from "../CartWidget/CartWidget";
 
-export const Navbar = (color) => {
+export const Navbar = () => {
   return (
     <div className={styles.containerNavbar}>
       <h1 className={styles.containerLogo}>
