@@ -7,27 +7,28 @@ import axios from "axios";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const [isDelete, setIsDelete] = useState(false);
-  const [isUpdate, setisUpdate] = useState(false);
+  const [isChange, setIsChange] = useState(false);
 
   useEffect(() => {
-    setIsDelete(false);
-    setisUpdate(false);
+    setIsChange(false);
     let data = axios.get("http://localhost:5000/products");
     data.then((res) => setItems(res.data));
-  }, [isDelete, isUpdate]);
+  }, [isChange]);
 
   const deleteProduct = (id) => {
     axios.delete(`http://localhost:5000/products/${id}`);
-    setIsDelete(true);
+    setIsChange(true);
   };
 
   const updateProduct = (id, data) => {
     axios.patch(`http://localhost:5000/products/${id}`, data);
-    setisUpdate(true);
+    setIsChange(true);
   };
 
-  const createProduct = (data) => {};
+  const createProduct = (data) => {
+    axios.post("http://localhost:5000/products", data);
+    setIsChange(true);
+  };
 
   return (
     <div>
@@ -36,6 +37,22 @@ const ItemListContainer = () => {
         deleteProduct={deleteProduct}
         updateProduct={updateProduct}
       />
+      <button
+        variant="contained"
+        size="small"
+        onClick={() => {
+          createProduct({
+            title: "total 90",
+            price: 15000,
+            stock: 22,
+            description: "Estas son las mejores zapatillas",
+            category: "deportivas",
+            img: "https://i.pinimg.com/originals/55/2c/75/552c75a0c361e570975d8502923eacfc.jpg",
+          });
+        }}
+      >
+        Crear producto
+      </button>
     </div>
   );
 };

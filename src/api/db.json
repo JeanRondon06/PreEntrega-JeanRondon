@@ -28,22 +28,13 @@
       "img": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430220/rtokwmt3j03bblbfhwhb.jpg"
     },
     {
-      "id": 5,
-      "title": "Puma",
-      "price": 19000,
-      "stock": 5,
-      "description": "Las clasicas zapatillas que van para cualquier momento del dia",
-      "category": "urbanas",
-      "img": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430165/images_lujpmr.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Puma",
-      "price": 19000,
-      "stock": 5,
-      "description": "Las clasicas zapatillas que van para cualquier momento del dia",
-      "category": "urbanas",
-      "img": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430165/images_lujpmr.jpg"
+      "title": "total 90",
+      "price": 15000,
+      "stock": 22,
+      "description": "Estas son las mejores zapatillas",
+      "category": "deportivas",
+      "img": "https://i.pinimg.com/originals/55/2c/75/552c75a0c361e570975d8502923eacfc.jpg",
+      "id": 5
     }
   ]
 }
