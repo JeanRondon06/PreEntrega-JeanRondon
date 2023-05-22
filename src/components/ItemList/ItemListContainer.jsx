@@ -1,19 +1,35 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { products } from "../../productsMock.js";
+import { useParams } from "react-router-dom";
 import axios from "axios";
+import useCounter from "../../utils/hooks/useCounter";
 
 // import useCounter from "../../utils/hooks/useCounter";
 
 const ItemListContainer = () => {
+  const { counter, increment } = useCounter();
+
   const [items, setItems] = useState([]);
   const [isChange, setIsChange] = useState(false);
 
+  const { categoryName } = useParams();
+  console.log(categoryName);
+
   useEffect(() => {
+    // const productFiltered = products.filter(
+    //   (prod) => prod.category === categoryName
+    // );
+
     setIsChange(false);
-    let data = axios.get("http://localhost:5000/products");
-    data.then((res) => setItems(res.data));
-  }, [isChange]);
+    // let data = axios.get("http://localhost:5000/products");
+    // data.then((res) => setItems(res.data));
+    let tarea = new Promise((resolve, reject) => {
+      resolve(products);
+    });
+
+    tarea.then((res) => setItems(res)).catch((error) => console.log(error));
+  }, [isChange, categoryName]);
 
   const deleteProduct = (id) => {
     axios.delete(`http://localhost:5000/products/${id}`);
@@ -37,7 +53,8 @@ const ItemListContainer = () => {
         deleteProduct={deleteProduct}
         updateProduct={updateProduct}
       />
-      <button
+
+      {/* <button
         variant="contained"
         size="small"
         onClick={() => {
@@ -52,7 +69,7 @@ const ItemListContainer = () => {
         }}
       >
         Crear producto
-      </button>
+      </button> */}
     </div>
   );
 };

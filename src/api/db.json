@@ -2,39 +2,39 @@
   "products": [
     {
       "id": 1,
-      "title": "Nike 360",
-      "price": 15000,
-      "stock": 2,
-      "description": "Estas son las mejores zapatillas",
-      "category": "deportivas",
-      "img": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669326932/free-metcon-4-zapatillas-de-entrenamiento-TQMCZg_fvia3m.png"
+      "title": "Heraldo road to inmortal, support 4",
+      "price": "$20",
+      "stock": 1000,
+      "description": "Guia para dejar de ser heraldo y ser un mejor player ",
+      "category": "pos 4",
+      "img": "https://media.esportsedition.com/wp-content/uploads/2019/01/herald.png"
+    },
+    {
+      "id": 2,
+      "title": "Heraldo road to inmortal, support 5 ",
+      "price": "$20",
+      "stock": 1000,
+      "description": "Guia para dejar de ser heraldo y ser un mejor player ",
+      "category": "pos 4",
+      "img": "https://media.esportsedition.com/wp-content/uploads/2019/01/herald.png"
     },
     {
       "id": 3,
-      "title": "Puma",
-      "price": 19000,
-      "stock": 5,
-      "description": "Las clasicas zapatillas que van para cualquier momento del dia",
-      "category": "urbanas",
-      "img": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430165/images_lujpmr.jpg"
+      "title": "Heraldo road to inmortal, OffLane 3",
+      "price": "$20",
+      "stock": 1000,
+      "description": "Guia para dejar de ser heraldo y ser un mejor player ",
+      "category": "pos 4",
+      "img": "https://media.esportsedition.com/wp-content/uploads/2019/01/herald.png"
     },
     {
       "id": 4,
-      "title": "Jaguar",
-      "price": 17800,
-      "stock": 5,
-      "description": "Zapatillas de ultima generacion para el deporte",
-      "category": "urbanas",
-      "img": "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430220/rtokwmt3j03bblbfhwhb.jpg"
-    },
-    {
-      "title": "total 90",
-      "price": 15000,
-      "stock": 22,
-      "description": "Estas son las mejores zapatillas",
-      "category": "deportivas",
-      "img": "https://i.pinimg.com/originals/55/2c/75/552c75a0c361e570975d8502923eacfc.jpg",
-      "id": 5
+      "title": "Heraldo road to inmortal, Midlane 2",
+      "price": "$20",
+      "stock": 1000,
+      "description": "Guia para dejar de ser heraldo y ser un mejor player ",
+      "category": "pos 4",
+      "img": "https://media.esportsedition.com/wp-content/uploads/2019/01/herald.png"
     }
   ]
 }

@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { ItemDetail } from "./ItemDetail";
 import { products } from "../../productsMock";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-  let id = 4;
+
+  const { id } = useParams();
 
   useEffect(() => {
-    let encontrado = products.find((prod) => prod.id == id);
+    let encontrado = products.find((prod) => prod.id == +id);
     setTimeout(() => {
       setProduct(encontrado);
-    }, 1500);
+    });
   }, [id]);
 
   return (
